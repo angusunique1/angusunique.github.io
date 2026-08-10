@@ -13,3 +13,4 @@ This is the first working version of the AU Creative Studios portfolio/business 
 - Add testimonials when available.
 - Add SEO/social sharing image and analytics.
 - Connect `angusunique.com` after the site is tested on GitHub Pages.
+\n\n## Portfolio images\nThe real portfolio artwork is stored in `assets/portfolio/`. The portfolio section includes category filters and a mobile-friendly project preview modal.\n
