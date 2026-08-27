@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The ChatGPT Prompt Encyclopedia | 500 Business Prompts</title>
+
+  <meta
+    name="description"
+    content="Stop guessing what to ask AI. Get The ChatGPT Prompt Encyclopedia — 500 battle-tested business prompts plus practical AI, Canva, community and business resources."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: #050713;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1140px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       GLOBAL
+    ========================== */
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #7db7ff;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-label::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: #5b9cff;
+      display: inline-block;
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: #9da7bd;
+      font-size: 17px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #49b4ff, #8b5cf6, #e66cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .highlight {
+      color: #ffd35a;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 17px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 900;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #ffe16a, #ffad00);
+      color: #101010;
+      box-shadow: 0 14px 40px rgba(255, 184, 0, 0.22);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 45px rgba(255, 184, 0, 0.32);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2388ff, #7346ff);
+      color: #ffffff;
+      box-shadow: 0 14px 40px rgba(60, 100, 255, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 70px 0 80px;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(20, 119, 255, 0.20), transparent 32%),
+        radial-gradient(circle at 90% 15%, rgba(130, 60, 255, 0.18), transparent 30%),
+        radial-gradient(circle at 70% 90%, rgba(0, 200, 255, 0.08), transparent 25%),
+        #050713;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 55px 55px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 50px;
+      border: 1px solid rgba(255,255,255,0.13);
+      background: rgba(255,255,255,0.045);
+      color: #a9ceff;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "✦";
+      color: #ffd35a;
+    }
+
+    .hero h1 {
+      font-size: clamp(43px, 6vw, 76px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
+      max-width: 760px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: #b6bfd2;
+      font-size: 18px;
+      margin-bottom: 26px;
+    }
+
+    .hero-description strong {
+      color: #ffffff;
+    }
+
+    .hero-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-bottom: 30px;
+      color: #d1d7e4;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .hero-benefits span::before {
+      content: "✓";
+      color: #5db3ff;
+      font-weight: 900;
+      margin-right: 7px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-note {
+      color: #7f899e;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+    .hero-note strong {
+      color: #ffd35a;
+    }
+
+    .hero-book {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .book-glow {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: #187cff;
+      filter: blur(120px);
+      opacity: 0.23;
+    }
+
+    .book-ring {
+      position: absolute;
+      width: 440px;
+      height: 440px;
+      border: 1px solid rgba(94, 159, 255, 0.12);
+      border-radius: 50%;
+    }
+
+    .book-image {
+      width: min(470px, 100%);
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 35px 50px rgba(0,0,0,0.58));
+      animation: floatBook 5s ease-in-out infinite;
+    }
+
+    @keyframes floatBook {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-12px) rotate(1deg);
+      }
+    }
+
+    .hero-price-card {
+      position: absolute;
+      right: -10px;
+      bottom: 35px;
+      z-index: 5;
+      padding: 15px 18px;
+      border-radius: 15px;
+      background: rgba(12, 17, 33, 0.92);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-price-card small {
+      display: block;
+      color: #8f9ab0;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero-price-card strong {
+      display: block;
+      color: #ffd35a;
+      font-size: 27px;
+      line-height: 1.1;
+    }
+
+    /* =========================
+       TRUST STRIP
+    ========================== */
+
+    .trust-strip {
+      padding: 20px 0;
+      background: #090d1b;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .trust-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px 35px;
+      color: #aab4c8;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .trust-items span::before {
+      content: "✦";
+      color: #5aa7ff;
+      margin-right: 7px;
+    }
+
+    /* =========================
+       VIDEO WALKTHROUGH
+    ========================== */
+
+    .video-section {
+      background:
+        radial-gradient(circle at center, rgba(66,126,255,0.10), transparent 45%),
+        #050713;
+    }
+
+    .video-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .video-intro {
+      max-width: 700px;
+      margin: -25px auto 35px;
+      text-align: center;
+      color: #9da7bd;
+      font-size: 16px;
+    }
+
+    .video-card {
+      padding: 12px;
+      border-radius: 24px;
+      background:
+        linear-gradient(145deg, rgba(40,130,255,0.10), rgba(125,60,255,0.07)),
+        rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+    }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 16px;
+      background: #000;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* =========================
+       PROBLEM
+    ========================== */
+
+    .problem {
+      background: #080c19;
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .problem-card {
+      padding: 32px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.075);
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.045),
+        rgba(255,255,255,0.018)
+      );
+      transition: 0.25s ease;
+    }
+
+    .problem-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(80,150,255,0.25);
+    }
+
+    .problem-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.06);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .problem-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .problem-card p {
+      color: #969fb3;
+      font-size: 15px;
+    }
+
+    /* =========================
+       STORY
+    ========================== */
+
+    .story {
+      background: #050713;
+    }
+
+    .story-layout {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .story-intro {
+      position: sticky;
+      top: 40px;
+    }
+
+    .story-intro h2 {
+      font-size: clamp(34px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+    }
+
+    .story-intro p {
+      margin-top: 18px;
+      color: #8993a8;
+      font-size: 14px;
+    }
+
+    .story-box {
+      padding: 42px;
+      border-radius: 25px;
+      background:
+        linear-gradient(145deg, rgba(40,130,255,0.10), rgba(125,60,255,0.06)),
+        rgba(255,255,255,0.025);
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .story-box p {
+      color: #c0c7d6;
+      font-size: 16px;
+      margin-bottom: 19px;
+    }
+
+    .story-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-box strong {
+      color: #ffffff;
+    }
+
+    .story-callout {
+      margin: 28px 0;
+      padding: 22px;
+      border-left: 3px solid #5b9cff;
+      background: rgba(80,150,255,0.07);
+      border-radius: 0 14px 14px 0;
+      color: #e4e9f3;
+      font-weight: 700;
+    }
+
+    /* =========================
+       ENCYCLOPEDIA
+    ========================== */
+
+    .inside {
+      background: #080c19;
+    }
+
+    .inside-intro {
+      max-width: 760px;
+      margin: -30px auto 45px;
+      text-align: center;
+      color: #a0a9bc;
+      font-size: 16px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .category-card {
+      padding: 26px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.075);
+      background: rgba(255,255,255,0.032);
+      transition: 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .category-card::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #287fff;
+      filter: blur(65px);
+      opacity: 0;
+      right: -40px;
+      bottom: -40px;
+      transition: 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(90,160,255,0.25);
+    }
+
+    .category-card:hover::after {
+      opacity: 0.13;
+    }
+
+    .category-number {
+      color: #568fd9;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .category-card h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .category-card p {
+      color: #919bae;
+      font-size: 13px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .inside-bottom {
+      margin-top: 45px;
+      text-align: center;
+    }
+
+    .inside-bottom strong {
+      color: #ffffff;
+    }
+
+    /* =========================
+       MID CTA
+    ========================== */
+
+    .mid-cta {
+      padding: 70px 0;
+      background:
+        radial-gradient(circle at center, rgba(66,126,255,0.16), transparent 45%),
+        #050713;
+    }
+
+    .mid-cta-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      padding: 32px 38px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .mid-cta-box h3 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    .mid-cta-box p {
+      color: #939db2;
+      font-size: 14px;
+    }
+
+    /* =========================
+       BONUSES
+    ========================== */
+
+    .bonus {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(124,60,255,0.12), transparent 32%),
+        #050713;
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .bonus-card {
+      padding: 30px;
+      border-radius: 19px;
+      border: 1px solid rgba(255,255,255,0.075);
+      background: rgba(255,255,255,0.035);
+    }
+
+    .bonus-card h3 {
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+
+    .bonus-card p {
+      color: #959fb3;
+      font-size: 14px;
+    }
+
+    .featured-bonus {
+      grid-column: span 2;
+      padding: 34px;
+      border-color: rgba(255,204,67,0.30);
+      background:
+        linear-gradient(145deg, rgba(255,198,52,0.10), rgba(255,255,255,0.025));
+    }
+
+    .featured-bonus h3 {
+      color: #ffd45a;
+      font-size: 21px;
+    }
+
+    /* =========================
+       VALUE
+    ========================== */
+
+    .value-section {
+      background: #080c19;
+    }
+
+    .value-box {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 25px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .value-content {
+      padding: 42px;
+      background: rgba(255,255,255,0.025);
+    }
+
+    .value-content h3 {
+      font-size: 28px;
+      margin-bottom: 22px;
+    }
+
+    .value-list {
+      list-style: none;
+    }
+
+    .value-list li {
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: #adb5c6;
+      font-size: 14px;
+    }
+
+    .value-list li::before {
+      content: "✓";
+      color: #63b1ff;
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .value-offer {
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(255,190,30,0.10), transparent 60%),
+        rgba(255,255,255,0.018);
+    }
+
+    .offer-badge {
+      display: inline-block;
+      align-self: center;
+      padding: 8px 14px;
+      border-radius: 50px;
+      background: #ffbf24;
+      color: #111;
+      font-size: 11px;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .value-offer h3 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-size: 70px;
+      font-weight: 900;
+      line-height: 1;
+      margin: 15px 0 5px;
+      background: linear-gradient(90deg, #ffe36c, #ffad00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .regular-price {
+      color: #727c90;
+      font-size: 14px;
+      text-decoration: line-through;
+      margin-bottom: 18px;
+    }
+
+    .value-offer p {
+      color: #9ca6ba;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    /* =========================
+       DISCOUNT
+    ========================== */
+
+    .discount {
+      background:
+        radial-gradient(circle at 20% 50%, rgba(50,145,255,0.12), transparent 30%),
+        #050713;
+    }
+
+    .discount-box {
+      max-width: 900px;
+      margin: auto;
+      padding: 42px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.09);
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.045),
+        rgba(255,255,255,0.018)
+      );
+      text-align: center;
+    }
+
+    .discount-box h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.05;
+      margin-bottom: 15px;
+    }
+
+    .discount-box p {
+      color: #a0a9bc;
+      max-width: 720px;
+      margin: auto;
+      font-size: 15px;
+    }
+
+    .discount-services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 9px;
+      margin-top: 25px;
+    }
+
+    .discount-services span {
+      padding: 8px 12px;
+      border-radius: 50px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: #c5ccda;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq {
+      background: #080c19;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+      padding: 22px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 16px;
+      list-style: none;
+      position: relative;
+      padding-right: 30px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: -4px;
+      color: #6caeff;
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      color: #969fb3;
+      margin-top: 13px;
+      padding-right: 30px;
+      font-size: 14px;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================== */
+
+    .final-cta {
+      padding: 115px 20px;
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(50,130,255,0.20), transparent 43%),
+        #050713;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 0.98;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      color: #a1aabd;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      color: #687287;
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: #040610;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 45px;
+      }
+
+      .hero-content {
+        order: 1;
+      }
+
+      .hero-book {
+        order: 0;
+      }
+
+      .hero h1 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-benefits {
+        justify-content: center;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-price-card {
+        right: 5%;
+        bottom: 15px;
+      }
+
+      .problem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .story-intro {
+        position: static;
+        text-align: center;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .mid-cta-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .value-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+
+      section {
+        padding: 75px 0;
+      }
+
+      .container {
+        width: min(92%, 500px);
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 50px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: clamp(40px, 12vw, 58px);
+        letter-spacing: -2.5px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero-benefits {
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .book-image {
+        width: 90%;
+      }
+
+      .book-ring {
+        width: 310px;
+        height: 310px;
+      }
+
+      .book-glow {
+        width: 250px;
+        height: 250px;
+      }
+
+      .hero-price-card {
+        right: 0;
+        bottom: 5px;
+        padding: 12px 14px;
+      }
+
+      .hero-price-card strong {
+        font-size: 22px;
+      }
+
+      .trust-items {
+        gap: 10px 18px;
+        font-size: 11px;
+      }
+
+      .section-heading {
+        margin-bottom: 38px;
+      }
+
+      .section-heading h2 {
+        letter-spacing: -1.5px;
+      }
+
+      .video-intro {
+        font-size: 14px;
+      }
+
+      .video-card {
+        padding: 7px;
+        border-radius: 18px;
+      }
+
+      .video-frame {
+        border-radius: 12px;
+      }
+
+      .story-box {
+        padding: 27px 21px;
+      }
+
+      .story-box p {
+        font-size: 15px;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bonus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-bonus {
+        grid-column: span 1;
+      }
+
+      .bonus-card,
+      .featured-bonus {
+        padding: 25px;
+      }
+
+      .mid-cta-box {
+        padding: 27px 22px;
+      }
+
+      .value-content,
+      .value-offer {
+        padding: 30px 22px;
+      }
+
+      .price {
+        font-size: 60px;
+      }
+
+      .discount-box {
+        padding: 30px 21px;
+      }
+
+      .final-cta {
+        padding: 85px 20px;
+      }
+
+      .final-cta h2 {
+        letter-spacing: -2px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header class="hero">
+
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          THE CHATGPT PROMPT ENCYCLOPEDIA
+        </div>
+
+        <h1>
+          Stop Guessing What to Ask AI.
+          <span class="gradient-text">
+            Start Getting Better Results.
+          </span>
+        </h1>
+
+        <p class="hero-description">
+          <strong>500 battle-tested business prompts</strong> organised
+          into practical categories to help entrepreneurs, business owners
+          and professionals use AI with more clarity, structure and purpose.
+        </p>
+
+        <div class="hero-benefits">
+
+          <span>500 Business Prompts</span>
+          <span>11 Practical Categories</span>
+          <span>AI Business Resources</span>
+
+        </div>
+
+        <div class="hero-actions">
+
+          <a
+            href="https://paystack.com/buy/the-chatgpt-prompt-encyclopedia-ipcusn"
+            class="btn btn-gold"
+            target="_blank"
+            rel="noopener"
+          >
+            🚀 GET THE ENCYCLOPEDIA — ₦5,000
+          </a>
+
+        </div>
+
+        <p class="hero-note">
+          🔥 <strong>First 100 buyers:</strong> ₦5,000 introductory offer.
+          Regular price: ₦12,200.
+        </p>
+
+      </div>
+
+
+      <div class="hero-book">
+
+        <div class="book-glow"></div>
+        <div class="book-ring"></div>
+
+        <img
+          src="assets/chatgpt-prompt-encyclopedia.png"
+          alt="The ChatGPT Prompt Encyclopedia"
+          class="book-image"
+        >
+
+        <div class="hero-price-card">
+
+          <small>First 100 Buyers</small>
+          <strong>₦5,000</strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       TRUST STRIP
+  ========================== -->
+
+  <div class="trust-strip">
+
+    <div class="container trust-items">
+
+      <span>500 Prompts</span>
+      <span>11 Business Categories</span>
+      <span>Practical Resources</span>
+      <span>Lifetime Member Benefits</span>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       VIDEO
+  ========================== -->
+
+  <section class="video-section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          MEET YOUR GUIDE
+        </div>
+
+        <h2>
+          See What You're Getting
+          <span class="gradient-text">Before You Begin.</span>
+        </h2>
+
+      </div>
+
+      <div class="video-wrapper">
+
+        <p class="video-intro">
+          Before you dive into the encyclopedia, let me show you what
+          you're getting and how the included resources can help you
+          make better use of AI.
+        </p>
+
+        <div class="video-card">
+
+          <div class="video-frame">
+
+            <iframe
+              src="https://www.youtube.com/embed/YlyZ74uBLds"
+              title="The ChatGPT Prompt Encyclopedia — Introduction"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROBLEM
+  ========================== -->
+
+  <section class="problem">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          THE REAL PROBLEM
+        </div>
+
+        <h2>
+          AI Isn't Difficult.
+          <span class="gradient-text">Knowing What to Ask Is.</span>
+        </h2>
+
+        <p>
+          You may already know that AI can help your business.
+          The frustrating part is getting it to give you the kind of
+          useful, specific response you're actually looking for.
+        </p>
+
+      </div>
+
+
+      <div class="problem-grid">
+
+        <div class="problem-card">
+
+          <div class="problem-icon">🤔</div>
+
+          <h3>
+            "What Do I Even Ask?"
+          </h3>
+
+          <p>
+            You open ChatGPT with an idea in your head,
+            but don't know how to turn that idea into an effective instruction.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <div class="problem-icon">🔄</div>
+
+          <h3>
+            Too Much Back & Forth
+          </h3>
+
+          <p>
+            You keep rewriting your prompt, correcting the answer
+            and starting over just to get something useful.
+          </p>
+
+        </div>
+
+
+        <div class="problem-card">
+
+          <div class="problem-icon">📉</div>
+
+          <h3>
+            Results That Feel Generic
+          </h3>
+
+          <p>
+            Instead of getting practical business-focused responses,
+            you receive answers that could apply to almost anyone.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       STORY
+  ========================== -->
+
+  <section class="story">
+
+    <div class="container story-layout">
+
+      <div class="story-intro">
+
+        <div class="section-label">
+          WHY I CREATED IT
+        </div>
+
+        <h2>
+          This Book Started With
+          <span class="gradient-text">a Problem I Had Myself.</span>
+        </h2>
+
+        <p>
+          I didn't create this because AI was a trend.
+          I created it because I wanted to understand how to use it better.
+        </p>
+
+      </div>
+
+
+      <div class="story-box">
+
+        <p>
+          When I started using AI for business and work,
+          I spent so much time figuring out what to ask.
+        </p>
+
+        <p>
+          I found myself rewriting the same prompts over and over again,
+          just trying to get the answers I wanted. Yet even after all
+          that back and forth, the answers were still not as good
+          as I expected.
+        </p>
+
+        <p>
+          I heard everyone talking about AI prompting.
+          Some people were sharing powerful prompts online.
+          Others were talking about how AI had transformed
+          almost every aspect of their business.
+        </p>
+
+        <p>
+          Then I realised something.
+        </p>
+
+        <div class="story-callout">
+          It's great to want to use AI.
+          <strong>It's even better to know how to give it stronger instructions.</strong>
+        </div>
+
+        <p>
+          Rather than wasting time going back and forth with AI,
+          I wanted to understand how to give it stronger instructions
+          and get better results.
+        </p>
+
+        <p>
+          So I started studying AI and prompting more deeply.
+          I wanted to discover the real power of AI and understand
+          what actually worked.
+        </p>
+
+        <p>
+          I started doing massive research, testing and comparison.
+          I tried different prompts. I compared the results.
+          I kept testing what worked and what didn't.
+        </p>
+
+        <p>
+          And eventually, I started saving the prompts that worked.
+        </p>
+
+        <p>
+          I started building a personal library.
+        </p>
+
+        <p>
+          That library eventually became
+          <strong>The ChatGPT Prompt Encyclopedia</strong> —
+          a collection of 500 battle-tested prompts designed
+          around real business needs.
+        </p>
+
+        <p>
+          But that collection kept growing...
+        </p>
+
+        <p>
+          <strong>Until it became something much bigger.</strong>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ENCYCLOPEDIA
+  ========================== -->
+
+  <section class="inside">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          INSIDE THE ENCYCLOPEDIA
+        </div>
+
+        <h2>
+          500 Prompts.
+          <span class="gradient-text">11 Areas of Business.</span>
+        </h2>
+
+        <p>
+          Instead of starting from a blank chat, go straight to the
+          type of help you need and find a practical prompt to work from.
+        </p>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 4</div>
+          <h3>💰 Sales & Closing Deals</h3>
+          <p>Prompts for sales conversations, objections, prospects and closing.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 5</div>
+          <h3>📣 Marketing & Advertising Copy</h3>
+          <p>Generate marketing angles, promotional copy and advertising ideas.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 6</div>
+          <h3>📱 Social Media & Content Creation</h3>
+          <p>Develop content ideas, captions, campaigns and social strategies.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 7</div>
+          <h3>✉️ Email Marketing & Outreach</h3>
+          <p>Create outreach, promotional emails and customer communication.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 8</div>
+          <h3>🎯 Branding & Positioning</h3>
+          <p>Build brand ideas, messaging, positioning and differentiation.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 9</div>
+          <h3>🤝 Customer Service & Retention</h3>
+          <p>Improve customer communication, support and retention strategies.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 10</div>
+          <h3>🛠️ Product & Service Development</h3>
+          <p>Use AI to develop, refine and improve products and services.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 11</div>
+          <h3>👥 Hiring, Team & Delegation</h3>
+          <p>Structure roles, hiring processes, delegation and team workflows.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 12</div>
+          <h3>💵 Finance, Pricing & Negotiation</h3>
+          <p>Work through pricing, negotiation, financial thinking and decisions.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 13</div>
+          <h3>🧭 Strategy & Business Planning</h3>
+          <p>Develop plans, strategies, ideas and structured business decisions.</p>
+        </div>
+
+        <div class="category-card">
+          <div class="category-number">CHAPTER 14</div>
+          <h3>⚡ Personal Productivity & Mindset</h3>
+          <p>Use AI to organise your work, improve productivity and think better.</p>
+        </div>
+
+      </div>
+
+
+      <div class="inside-bottom">
+
+        <p>
+          <strong>11 categories. 500 prompts. One practical reference you can return to whenever you need it.</strong>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       MID CTA
+  ========================== -->
+
+  <section class="mid-cta">
+
+    <div class="container">
+
+      <div class="mid-cta-box">
+
+        <div>
+
+          <h3>
+            Stop staring at a blank AI chat.
+          </h3>
+
+          <p>
+            Start with a prompt designed around the task you need to accomplish.
+          </p>
+
+        </div>
+
+        <a
+          href="https://paystack.com/buy/the-chatgpt-prompt-encyclopedia-ipcusn"
+          class="btn btn-gold"
+          target="_blank"
+          rel="noopener"
+        >
+          GET THE ENCYCLOPEDIA — ₦5,000
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BONUSES
+  ========================== -->
+
+  <section class="bonus">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          INCLUDED WITH YOUR PURCHASE
+        </div>
+
+        <h2>
+          The Book Is Just
+          <span class="gradient-text">the Beginning.</span>
+        </h2>
+
+        <p>
+          Your purchase also gives you access to practical resources
+          designed to help you move from reading to actually using AI.
+        </p>
+
+      </div>
+
+
+      <div class="bonus-grid">
+
+        <div class="bonus-card">
+
+          <h3>🎥 Video Walkthrough</h3>
+
+          <p>
+            A practical walkthrough showing you how to find,
+            customise, use and refine the prompts.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-card">
+
+          <h3>🤖 32-Video AI Marketing Course</h3>
+
+          <p>
+            Learn more about artificial intelligence in marketing
+            and practical ways it can support your business.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-card">
+
+          <h3>🎨 13-Video Canva Course</h3>
+
+          <p>
+            Learn how to create professional business designs
+            without always needing a graphic designer.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-card">
+
+          <h3>💬 AI Business Circle</h3>
+
+          <p>
+            Join the private community, connect with other entrepreneurs
+            and continue learning together.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-card">
+
+          <h3>📅 Monthly Prompt Pack</h3>
+
+          <p>
+            Receive at least five new strong business prompts
+            every month to keep expanding your AI toolkit.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-card">
+
+          <h3>🔄 Lifetime Business Updates</h3>
+
+          <p>
+            Receive future updates to the book and relevant
+            business resources at no additional cost.
+          </p>
+
+        </div>
+
+
+        <div class="bonus-card featured-bonus">
+
+          <h3>
+            ⭐ 5% Lifetime AU Creative Studios Discount
+          </h3>
+
+          <p>
+            Eligible members receive a 5% lifetime discount on eligible
+            AU Creative Studios services, including web design, logo design,
+            brand identity design, flyers, social media designs,
+            video editing, motion graphics, AI talking avatar videos,
+            promotional videos, presentations and whiteboard animations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       VALUE + PRICE
+  ========================== -->
+
+  <section class="value-section">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          THE OFFER
+        </div>
+
+        <h2>
+          Everything You Need to
+          <span class="gradient-text">Start Using AI Better.</span>
+        </h2>
+
+      </div>
+
+
+      <div class="value-box">
+
+        <div class="value-content">
+
+          <h3>
+            Your AI Business Starter Bundle
+          </h3>
+
+          <ul class="value-list">
+
+            <li>The ChatGPT Prompt Encyclopedia</li>
+            <li>500 business-focused prompts</li>
+            <li>11 practical business categories</li>
+            <li>Video walkthrough</li>
+            <li>32-video AI marketing course</li>
+            <li>13-video Canva course</li>
+            <li>AI Business Circle access</li>
+            <li>Monthly prompt packs</li>
+            <li>Lifetime business updates</li>
+            <li>Eligible 5% lifetime AU Creative Studios discount</li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="value-offer">
+
+          <div class="offer-badge">
+            🔥 FIRST 100 BUYERS
+          </div>
+
+          <h3>
+            Introductory Offer
+          </h3>
+
+          <div class="price">
+            ₦5,000
+          </div>
+
+          <div class="regular-price">
+            Regular price: ₦12,200
+          </div>
+
+          <p>
+            Secure the introductory price while it is available.
+          </p>
+
+          <a
+            href="https://paystack.com/buy/the-chatgpt-prompt-encyclopedia-ipcusn"
+            class="btn btn-gold"
+            target="_blank"
+            rel="noopener"
+          >
+            🚀 GET THE BUNDLE NOW
+          </a>
+
+          <p style="margin-top: 13px; margin-bottom: 0;">
+            After the first 100 buyers, the price becomes ₦12,200.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DISCOUNT
+  ========================== -->
+
+  <section class="discount">
+
+    <div class="container">
+
+      <div class="discount-box">
+
+        <div class="section-label">
+          MEMBER BENEFIT
+        </div>
+
+        <h2>
+          Your Purchase Also Unlocks
+          <span class="gradient-text">5% Lifetime Savings.</span>
+        </h2>
+
+        <p>
+          Eligible members receive a 5% lifetime discount on eligible
+          AU Creative Studios services. That means your membership can
+          continue benefiting you whenever you need qualifying creative
+          and digital services.
+        </p>
+
+        <div class="discount-services">
+
+          <span>Web Design</span>
+          <span>Logo Design</span>
+          <span>Brand Identity</span>
+          <span>Flyer Design</span>
+          <span>Social Media Creatives</span>
+          <span>Video Editing</span>
+          <span>Motion Graphics</span>
+          <span>AI Avatar Videos</span>
+          <span>Promotional Videos</span>
+          <span>Presentations</span>
+          <span>Whiteboard Animation</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FAQ
+  ========================== -->
+
+  <section class="faq">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          QUESTIONS
+        </div>
+
+        <h2>
+          Before You Get Started
+        </h2>
+
+        <p>
+          A few quick answers to common questions.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <details>
+
+          <summary>
+            Who is The ChatGPT Prompt Encyclopedia for?
+          </summary>
+
+          <p>
+            It is primarily designed for entrepreneurs, business owners,
+            brands and professionals who want to use AI more effectively
+            for business and work.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            What exactly do I receive?
+          </summary>
+
+          <p>
+            You receive The ChatGPT Prompt Encyclopedia with 500 prompts,
+            plus the included video walkthrough, 32-video AI marketing
+            course, 13-video Canva course, AI Business Circle access,
+            monthly prompt packs, lifetime updates and the eligible
+            5% lifetime AU Creative Studios discount.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Do I need to be an AI expert?
+          </summary>
+
+          <p>
+            No. The prompts are designed to give you a practical starting
+            point. You provide the relevant information about your own
+            business and customise the prompt for your specific situation.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Can I use the prompts with ChatGPT?
+          </summary>
+
+          <p>
+            Yes. The encyclopedia is specifically built around ChatGPT
+            prompting. You can customise the prompts with information
+            relevant to your own business and needs.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            How do I receive my resources after payment?
+          </summary>
+
+          <p>
+            After your payment is confirmed, you will receive instructions
+            for accessing your ebook and the included resources.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            How much does the bundle cost?
+          </summary>
+
+          <p>
+            The first 100 buyers can get the complete bundle for ₦5,000.
+            After the first 100 buyers, the price becomes ₦12,200.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            What is the 5% lifetime discount?
+          </summary>
+
+          <p>
+            Eligible members receive a 5% lifetime discount on eligible
+            AU Creative Studios services, subject to the terms of the
+            membership discount.
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL CTA
+  ========================== -->
+
+  <section class="final-cta">
+
+    <div class="container">
+
+      <div class="section-label">
+        YOUR NEXT MOVE
+      </div>
+
+      <h2>
+        Stop Guessing.<br>
+        <span class="gradient-text">Start Prompting.</span>
+      </h2>
+
+      <p>
+        Give yourself a practical AI toolkit you can return to whenever
+        you need help with sales, marketing, content, strategy,
+        productivity and more.
+      </p>
+
+      <a
+        href="https://paystack.com/buy/the-chatgpt-prompt-encyclopedia-ipcusn"
+        class="btn btn-gold"
+        target="_blank"
+        rel="noopener"
+      >
+        🚀 GET THE AI BUSINESS STARTER BUNDLE — ₦5,000
+      </a>
+
+      <p class="hero-note">
+        🔥 First 100 buyers: ₦5,000 • Regular price: ₦12,200
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    © 2026 Angus Unique • AU Creative Studios
+
+  </footer>
+
+
+</body>
+</html>
